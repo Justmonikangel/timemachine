@@ -1,0 +1,37 @@
+timezone: Australia/Melbourne
+focus_calendar_name: Focus Blocks
+protected_calendar_names:
+  - Monash class
+  - Monash Assessments S2 2026
+deadline_calendar_names:
+  - Monash Assessments S2 2026
+
+planning:
+  capacity_ratio: 0.70
+  horizon_days: 14
+  max_high_energy_blocks_per_day: 2
+  transition_buffer_minutes: 15
+  post_class_buffer_minutes: 30
+  default_task_block_minutes: 60
+  maximum_block_minutes:
+    high: 90
+    medium: 75
+    low: 60
+  working_hours:
+    monday: ["08:30", "21:00"]
+    tuesday: ["08:30", "21:00"]
+    wednesday: ["08:30", "21:00"]
+    thursday: ["08:30", "21:00"]
+    friday: ["08:30", "20:00"]
+    saturday: ["10:00", "18:00"]
+    sunday: ["10:00", "18:00"]
+
+safety:
+  preview_required: true
+  allow_skip_non_protected_events: false
+  only_modify_managed_focus_blocks: true
+
+voice:
+  model: small
+  device: cpu
+  compute_type: int8

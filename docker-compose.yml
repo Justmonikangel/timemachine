@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./policy.yaml:/app/policy.yaml:ro
+      - ./.secrets:/app/.secrets
+      - ./data:/app/data
+    environment:
+      ACA_DB_PATH: /app/data/adaptive_calendar_agent.db
+      ACA_CREDENTIALS_PATH: /app/.secrets/credentials.json
+      ACA_TOKEN_PATH: /app/.secrets/token.json
